@@ -1,5 +1,3 @@
-require_relative "../app/big_five_results_text_serializer"
-
 describe 'BigFiveResultsTextSerializer' do
   let(:text) { File.read('./result.txt') }
   let(:serializer) { BigFiveResultsTextSerializer.new(text) }

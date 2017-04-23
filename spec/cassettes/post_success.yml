@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://recruitbot.trikeapps.com/api/v1/roles/mid-senior-web-developer/big_five_profile_submissions
+    body:
+      encoding: UTF-8
+      string: '{"NAME":"Wayne","EMAIL":"wayne.5540@gmail.com","EXTRAVERSION":{"Overall
+        Score":72,"Facets":{"Friendliness":74,"Gregariousness":55,"Assertiveness":73,"Activity
+        Level":49,"Excitement-Seeking":46,"Cheerfulness":90}},"AGREEABLENESS":{"Overall
+        Score":89,"Facets":{"Trust":99,"Morality":89,"Altruism":69,"Cooperation":63,"Modesty":65,"Sympathy":63}},"CONSCIENTIOUSNESS":{"Overall
+        Score":85,"Facets":{"Self-Efficacy":90,"Orderliness":41,"Dutifulness":78,"Achievement-Striving":66,"Self-Discipline":92,"Cautiousness":87}},"NEUROTICISM":{"Overall
+        Score":2,"Facets":{"Anxiety":12,"Anger":1,"Depression":9,"Self-Consciousness":22,"Immoderation":12,"Vulnerability":19}},"OPENNESS
+        TO EXPERIENCE":{"Overall Score":77,"Facets":{"Imagination":19,"Artistic Interests":69,"Emotionality":65,"Adventurousness":93,"Intellect":79,"Liberalism":71}}}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - recruitbot.trikeapps.com
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Sun, 23 Apr 2017 08:14:03 GMT
+      Server:
+      - Apache
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.207638'
+      X-Request-Id:
+      - 57202990-79f7-4a09-af61-0ed22891dff0
+      X-Powered-By:
+      - Phusion Passenger 5.0.29
+      Set-Cookie:
+      - _passenger_route=9323767; Path=/
+      Etag:
+      - W/"25f3ccf420b1a1dd8c03c5a67711b6fe"
+      Status:
+      - 201 Created
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/plain; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: rL3RK5eL9gHU6jeKs5x5DjwU
+    http_version: 
+  recorded_at: Sun, 23 Apr 2017 08:14:03 GMT
+recorded_with: VCR 3.0.3

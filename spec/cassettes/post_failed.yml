@@ -1,0 +1,92 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://recruitbot.trikeapps.com/api/v1/roles/mid-senior-web-developer/big_five_profile_submissions
+    body:
+      encoding: UTF-8
+      string: '{"hello":"world"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - recruitbot.trikeapps.com
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Date:
+      - Sun, 23 Apr 2017 08:13:21 GMT
+      Server:
+      - Apache
+      Cache-Control:
+      - no-cache
+      X-Runtime:
+      - '0.006483'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - 30e487cb-5b65-4dc4-8614-e65ea30158a0
+      X-Powered-By:
+      - Phusion Passenger 5.0.29
+      Set-Cookie:
+      - _passenger_route=9323767; Path=/
+      Status:
+      - 422 Unprocessable Entity
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/plain; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: |-
+        No name specified
+        No score given for the trait Extraversion
+        No score given for the Extraversion facet Friendliness
+        No score given for the Extraversion facet Gregariousness
+        No score given for the Extraversion facet Assertiveness
+        No score given for the Extraversion facet Activity Level
+        No score given for the Extraversion facet Excitement-Seeking
+        No score given for the Extraversion facet Cheerfulness
+        No score given for the trait Agreeableness
+        No score given for the Agreeableness facet Trust
+        No score given for the Agreeableness facet Morality
+        No score given for the Agreeableness facet Altruism
+        No score given for the Agreeableness facet Cooperation
+        No score given for the Agreeableness facet Modesty
+        No score given for the Agreeableness facet Sympathy
+        No score given for the trait Conscientiousness
+        No score given for the Conscientiousness facet Self-Efficacy
+        No score given for the Conscientiousness facet Orderliness
+        No score given for the Conscientiousness facet Dutifulness
+        No score given for the Conscientiousness facet Achievement-Striving
+        No score given for the Conscientiousness facet Self-Discipline
+        No score given for the Conscientiousness facet Cautiousness
+        No score given for the trait Neuroticism
+        No score given for the Neuroticism facet Anxiety
+        No score given for the Neuroticism facet Anger
+        No score given for the Neuroticism facet Depression
+        No score given for the Neuroticism facet Self-Consciousness
+        No score given for the Neuroticism facet Immoderation
+        No score given for the Neuroticism facet Vulnerability
+        No score given for the trait Openness To Experience
+        No score given for the Openness To Experience facet Imagination
+        No score given for the Openness To Experience facet Artistic Interests
+        No score given for the Openness To Experience facet Emotionality
+        No score given for the Openness To Experience facet Adventurousness
+        No score given for the Openness To Experience facet Intellect
+        No score given for the Openness To Experience facet Liberalism
+    http_version: 
+  recorded_at: Sun, 23 Apr 2017 08:13:21 GMT
+recorded_with: VCR 3.0.3
