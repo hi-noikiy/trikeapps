@@ -68,36 +68,48 @@ describe 'BigFiveResultsTextSerializer' do
   describe '#hash' do
     subject { serializer.hash }
 
-    it 'returns result in hash' do
-      is_expected.to eq(result)
+    describe 'success' do
+      it 'returns result in hash' do
+        is_expected.to eq(result)
+      end
+
+      it 'returns NAME' do
+        expect(subject['NAME']).to eq('Wayne')
+      end
+
+      it 'returns EMAIL' do
+        expect(subject['EMAIL']).to eq('wayne.5540@gmail.com')
+      end
+
+      it 'returns EXTRAVERSION' do
+        expect(subject['EXTRAVERSION']).to eq(result['EXTRAVERSION'])
+      end
+
+      it 'returns AGREEABLENESS' do
+        expect(subject['AGREEABLENESS']).to eq(result['AGREEABLENESS'])
+      end
+
+      it 'returns CONSCIENTIOUSNESS' do
+        expect(subject['CONSCIENTIOUSNESS']).to eq(result['CONSCIENTIOUSNESS'])
+      end
+
+      it 'returns NEUROTICISM' do
+        expect(subject['NEUROTICISM']).to eq(result['NEUROTICISM'])
+      end
+
+      it 'returns OPENNESS TO EXPERIENCE' do
+        expect(subject['OPENNESS TO EXPERIENCE']).to eq(result['OPENNESS TO EXPERIENCE'])
+      end
     end
 
-    it 'returns NAME' do
-      expect(subject['NAME']).to eq('Wayne')
-    end
+    describe 'failed' do
+      context 'when given wrong text result' do
+        let(:text) { 'wrong text' }
 
-    it 'returns EMAIL' do
-      expect(subject['EMAIL']).to eq('wayne.5540@gmail.com')
-    end
-
-    it 'returns EXTRAVERSION' do
-      expect(subject['EXTRAVERSION']).to eq(result['EXTRAVERSION'])
-    end
-
-    it 'returns AGREEABLENESS' do
-      expect(subject['AGREEABLENESS']).to eq(result['AGREEABLENESS'])
-    end
-
-    it 'returns CONSCIENTIOUSNESS' do
-      expect(subject['CONSCIENTIOUSNESS']).to eq(result['CONSCIENTIOUSNESS'])
-    end
-
-    it 'returns NEUROTICISM' do
-      expect(subject['NEUROTICISM']).to eq(result['NEUROTICISM'])
-    end
-
-    it 'returns OPENNESS TO EXPERIENCE' do
-      expect(subject['OPENNESS TO EXPERIENCE']).to eq(result['OPENNESS TO EXPERIENCE'])
+        it 'raises RuntimeError' do
+          expect{ subject }.to raise_error(RuntimeError, %r(Can't find key))
+        end
+      end
     end
   end
 end
