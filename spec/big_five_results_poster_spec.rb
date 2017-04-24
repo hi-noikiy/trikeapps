@@ -28,6 +28,12 @@ describe 'BigFiveResultsPoster' do
 
         expect(poster.token).to eq('rL3RK5eL9gHU6jeKs5x5DjwU')
       end
+
+      it "doesn't recieve errors" do
+        subject
+
+        expect(poster.errors).to be nil
+      end
     end
 
     describe 'failed' do
@@ -54,6 +60,12 @@ describe 'BigFiveResultsPoster' do
           subject
 
           expect(poster.token).to be nil
+        end
+
+        it 'receives errors' do
+          subject
+
+          expect(poster.errors).not_to be nil
         end
       end
     end

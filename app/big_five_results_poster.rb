@@ -1,19 +1,34 @@
+require 'net/http'
+require 'json'
+
 class BigFiveResultsPoster
-  attr_reader :response_code, :token
+  attr_reader :response_code, :token, :errors
 
   def initialize(results_hash)
     @results_hash = results_hash
   end
 
   def post
-    res = TrikeAppsApi.post!(params: @results_hash)
-    @response_code = res.code.to_i
-    @token = res.body if res.code == '201'
+    res = send_request!
+    save_attributes!(res)
 
-    res.code == '201'
+    success?(res)
   end
 
   private
+
+  def success?(res)
+    res.code == '201'
+  end
+
+  def save_attributes!(res)
+    @response_code = res.code.to_i
+    success?(res) ? @token = res.body : @errors = res.body
+  end
+
+  def send_request!
+    TrikeAppsApi.post!(params: @results_hash)
+  end
 
   class TrikeAppsApi
     class << self
